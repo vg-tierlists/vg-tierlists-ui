@@ -1,0 +1,18 @@
+{
+	"games": [
+		{
+			"id": "e893c2b9-9e32-4b6c-a9c1-29507c9e5b7c",
+			"name": "Arknights",
+			"slug": "arknights",
+			"description": "Arknights game",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/5/50/Arknights_English_Release_Logo.svg"
+		},
+		{
+			"id": "33f5c961-5d4c-4183-8237-392eec0453c0",
+			"name": "Goddess of Victory: Nikke",
+			"slug": "nikke",
+			"description": "Nikke",
+			"image": "https://upload.wikimedia.org/wikipedia/en/2/24/Nikke_%E2%80%93_Goddess_of_Victory_logo.png"
+		}
+	]
+}
