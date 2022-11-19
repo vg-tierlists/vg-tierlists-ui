@@ -1,8 +1,11 @@
 import {AppShell} from '@mantine/core';
 
+import Body from 'components/Body';
+import Header from 'components/Header';
+
 const Layout = () => (
-	<AppShell>
-		<h1>Test</h1>
+	<AppShell header={<Header />}>
+		<Body></Body>
 	</AppShell>
 );
 
