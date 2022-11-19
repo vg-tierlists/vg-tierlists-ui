@@ -1,8 +1,13 @@
 import {Container, Title} from '@mantine/core';
 
+import Games from 'pages/Games';
+
 const Body = () => (
 	<Container>
-		<Title h={2}>Test</Title>
+		<div>
+			<Title h={2}>Test</Title>
+			<Games />
+		</div>
 	</Container>
 );
 
