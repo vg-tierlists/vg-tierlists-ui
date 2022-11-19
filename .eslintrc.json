@@ -2,10 +2,10 @@
 	"extends": [
 		"react-app",
 		"react-app/jest",
-		"airbnb-typescript",
-		"plugin:@typescript-eslint/recommended",
 		"plugin:jest/recommended",
+		"plugin:react/recommended",
 		"plugin:react/jsx-runtime",
+		"plugin:@typescript-eslint/recommended",
 		"prettier"
 	],
 	"parserOptions": {
@@ -21,6 +21,7 @@
 			"error",
 			{
 				"groups": [
+					// source: https://dev.to/julioxavierr/sorting-your-imports-with-eslint-3ped
 					// Packages `react` related packages come first.
 					["^react", "^@?\\w"],
 					// Internal packages.
