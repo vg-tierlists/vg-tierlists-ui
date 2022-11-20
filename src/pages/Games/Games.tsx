@@ -1,20 +1,24 @@
-import {Text, Title} from '@mantine/core';
+import {SimpleGrid, Space, Title} from '@mantine/core';
 
+import GameCard from 'components/GameCard';
 import useGames from 'hooks/api/useGames';
 
 const Games = () => {
-	const {isLoading, error, data, isFetching} = useGames();
+	const {isLoading, error, data: games, isFetching} = useGames();
 
-	if (isLoading || error || isFetching || !data) {
+	if (isLoading || error || isFetching || !games) {
 		return <></>;
 	}
 
 	return (
 		<>
 			<Title>Games</Title>
-			{data.map((game) => (
-				<Text key={game.id}>{game.name}</Text>
-			))}
+			<Space h="lg" />
+			<SimpleGrid cols={3}>
+				{games.map((game) => (
+					<GameCard key={game.id} game={game} />
+				))}
+			</SimpleGrid>
 		</>
 	);
 };
