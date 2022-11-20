@@ -1,0 +1,22 @@
+{
+	"games": [
+		{
+			"id": "e893c2b9-9e32-4b6c-a9c1-29507c9e5b7c",
+			"name": "Arknights",
+			"slug": "arknights",
+			"image": "https://webusstatic.yo-star.com/ark_us_web/assets/166746597437316197/3e1aaf3f7ea64ee4064b7c13848420b3.jpg"
+		},
+		{
+			"id": "33f5c961-5d4c-4183-8237-392eec0453c0",
+			"name": "Goddess of Victory: Nikke",
+			"slug": "nikke",
+			"image": "https://nikke-en.com/pc/ossweb-img/swiper3_img1.png"
+		},
+		{
+			"id": "86de2f00-6912-4320-9fbe-687db24a999a",
+			"name": "Pokemon Scarlet & Violet",
+			"slug": "pokemon-scarlet-violet",
+			"image": "https://upload.wikimedia.org/wikipedia/en/0/00/Pok%C3%A9mon_Scarlet_and_Violet_banner.png"
+		}
+	]
+}

@@ -1,9 +1,6 @@
-import {Container, Title} from '@mantine/core';
+import {PropsWithChildren} from 'react';
+import {Container} from '@mantine/core';
 
-const Body = () => (
-	<Container>
-		<Title h={2}>Test</Title>
-	</Container>
-);
+const Body = ({children}: PropsWithChildren) => <Container>{children}</Container>;
 
 export default Body;

@@ -4,19 +4,27 @@
 	"private": true,
 	"scripts": {
 		"prepare": "husky install",
-		"start": "react-scripts start",
+		"start": "BROWSER=none react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"format": "prettier --write --ignore-unknown .",
 		"format:check": "prettier --check --ignore-unknown .",
 		"lint": "eslint --ext ts,tsx src",
-		"lint:fix": "npm run lint -- --fix"
+		"lint:fix": "npm run lint -- --fix",
+		"preapi": "cp api/db.json api/live.json",
+		"api": "json-server -p 8080 api/live.json",
+		"api:save": "cp api/live.json api/db.json",
+		"api:watch": "npm run api -- -w"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.10.5",
 		"@mantine/core": "^5.8.2",
 		"@mantine/hooks": "^5.8.2",
+		"@tanstack/react-query": "^4.16.1",
+		"@tanstack/react-query-devtools": "^4.16.1",
+		"@tanstack/react-router": "^0.0.1-beta.25",
+		"axios": "^1.1.3",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"web-vitals": "^2.1.4"
@@ -32,6 +40,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-simple-import-sort": "^8.0.0",
 		"husky": "^8.0.2",
+		"json-server": "^0.17.1",
 		"lint-staged": "^13.0.3",
 		"prettier": "^2.7.1",
 		"react-scripts": "5.0.1",

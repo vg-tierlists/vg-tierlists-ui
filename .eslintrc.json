@@ -25,7 +25,7 @@
 					// Packages `react` related packages come first.
 					["^react", "^@?\\w"],
 					// Internal packages.
-					["^(api|components|hooks|pages|util)(/.*|$)"],
+					["^(api|components|config|hooks|pages|util)(/.*|$)"],
 					// Parent imports. Put `..` last.
 					["^\\.\\.(?!/?$)", "^\\.\\./?$"],
 					// Other relative imports. Put same-folder imports and `.` last.
