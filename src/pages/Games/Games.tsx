@@ -1,4 +1,4 @@
-import {Text} from '@mantine/core';
+import {Text, Title} from '@mantine/core';
 
 import useGames from 'hooks/api/useGames';
 
@@ -11,6 +11,7 @@ const Games = () => {
 
 	return (
 		<>
+			<Title>Games</Title>
 			{data.map((game) => (
 				<Text key={game.id}>{game.name}</Text>
 			))}

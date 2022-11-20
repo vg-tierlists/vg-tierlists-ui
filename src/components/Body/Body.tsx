@@ -1,14 +1,6 @@
-import {Container, Title} from '@mantine/core';
+import {PropsWithChildren} from 'react';
+import {Container} from '@mantine/core';
 
-import Games from 'pages/Games';
-
-const Body = () => (
-	<Container>
-		<div>
-			<Title h={2}>Test</Title>
-			<Games />
-		</div>
-	</Container>
-);
+const Body = ({children}: PropsWithChildren) => <Container>{children}</Container>;
 
 export default Body;
