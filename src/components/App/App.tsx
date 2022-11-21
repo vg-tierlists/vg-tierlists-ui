@@ -1,14 +1,12 @@
-import {Outlet} from '@tanstack/react-router';
+import {RouterProvider} from 'react-router-dom';
 
-import Layout from 'components/Layout';
 import Providers from 'components/Providers';
+import router from 'config/router';
 
 function App() {
 	return (
 		<Providers>
-			<Layout>
-				<Outlet />
-			</Layout>
+			<RouterProvider router={router} />
 		</Providers>
 	);
 }
