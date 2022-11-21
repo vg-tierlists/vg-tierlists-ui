@@ -8,7 +8,7 @@ type Props = {
 };
 
 const GameCard = ({game}: Props) => (
-	<Card radius="md" component={Link} to={`/games/${game.id}`}>
+	<Card radius="md" component={Link} to={`/${game.slug}`}>
 		<Card.Section>
 			<Image src={game.image} height={160} alt={game.name} />
 		</Card.Section>
