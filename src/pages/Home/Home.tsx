@@ -1,5 +1,5 @@
-import {Games} from 'pages';
+import {Title} from '@mantine/core';
 
-const Home = () => <Games />;
+const Home = () => <Title>Home</Title>;
 
 export default Home;
