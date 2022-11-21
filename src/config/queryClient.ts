@@ -1,6 +1,6 @@
 import {QueryClient} from '@tanstack/react-query';
 
-import {CACHE_STALE_TIME} from 'config/config';
+import {CACHE_STALE_TIME} from 'config';
 
 const queryClient = new QueryClient({
 	defaultOptions: {

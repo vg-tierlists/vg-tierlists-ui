@@ -1,7 +1,7 @@
 import {SimpleGrid, Space, Title} from '@mantine/core';
 
 import GameCard from 'components/GameCard';
-import useGames from 'hooks/api/useGames';
+import {useGames} from 'hooks';
 
 const Games = () => {
 	const {data: games} = useGames();
