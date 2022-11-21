@@ -1,12 +1,11 @@
-import {PropsWithChildren} from 'react';
+import {Outlet} from 'react-router-dom';
 import {AppShell} from '@mantine/core';
 
-import Body from 'components/Body';
 import Header from 'components/Header';
 
-const Layout = ({children}: PropsWithChildren) => (
+const Layout = () => (
 	<AppShell header={<Header />}>
-		<Body>{children}</Body>
+		<Outlet />
 	</AppShell>
 );
 

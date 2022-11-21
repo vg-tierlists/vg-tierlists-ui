@@ -3,7 +3,7 @@ import {MantineProvider} from '@mantine/core';
 import {QueryClientProvider} from '@tanstack/react-query';
 import {ReactQueryDevtools} from '@tanstack/react-query-devtools';
 
-import queryClient from 'config/queryClient';
+import {queryClient} from 'config';
 
 const Providers = ({children}: PropsWithChildren) => (
 	<MantineProvider withGlobalStyles withNormalizeCSS theme={{colorScheme: 'dark'}}>

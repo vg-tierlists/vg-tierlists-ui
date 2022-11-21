@@ -1,12 +1,11 @@
 import {useParams} from 'react-router-dom';
-import {useQuery} from '@tanstack/react-query';
 
-import getGame from 'api/getGame';
+import useGame from './useGame';
 
 export default function useCurrentGame() {
 	const {id} = useParams();
 	if (!id) {
 		throw Error('Nope?');
 	}
-	return useQuery(getGame(id));
+	return useGame(id);
 }

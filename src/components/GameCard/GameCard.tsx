@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import {Card, Image, Space, Title} from '@mantine/core';
 
-import {Game} from 'api/types/Game';
+import {Game} from 'api/types';
 
 type Props = {
 	game: Game;

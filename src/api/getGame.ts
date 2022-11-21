@@ -1,7 +1,7 @@
 import axios, {AxiosResponse} from 'axios';
 
-import {Game} from 'api/types/Game';
-import {API_URL} from 'config/config';
+import {Game} from 'api/types';
+import {API_URL} from 'config';
 
 export default function getGame(id: string) {
 	return {
