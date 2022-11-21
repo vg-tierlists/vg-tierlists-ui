@@ -15,3 +15,4 @@ function env(key: string, defaultValue?: string): string | undefined {
 }
 
 export const API_URL: string = env('API_URL', 'http://localhost:8080') as string;
+export const CACHE_STALE_TIME: number = parseInt(env('CACHE_STALE_TIME', '30000') as string);
