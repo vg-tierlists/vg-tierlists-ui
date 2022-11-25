@@ -5,8 +5,7 @@ import {createBrowserRouter} from 'react-router-dom';
 import {getGame} from 'api';
 import GameNav from 'components/GameNav';
 import {queryClient} from 'config';
-import {Game, Home} from 'pages';
-import Empty from 'pages/Empty';
+import {Characters, Game, Home, TierLists} from 'pages';
 
 type QueryProps = {
 	queryKey: QueryKey;
@@ -40,11 +39,11 @@ const router = createBrowserRouter([
 					},
 					{
 						path: 'tier-lists',
-						element: <Empty />,
+						element: <TierLists />,
 					},
 					{
 						path: 'characters',
-						element: <Empty />,
+						element: <Characters />,
 					},
 				],
 			},
