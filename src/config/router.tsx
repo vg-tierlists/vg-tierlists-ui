@@ -6,6 +6,7 @@ import {getGame} from 'api';
 import GameNav from 'components/GameNav';
 import {queryClient} from 'config';
 import {Game, Home} from 'pages';
+import Empty from 'pages/Empty';
 
 type QueryProps = {
 	queryKey: QueryKey;
@@ -36,6 +37,14 @@ const router = createBrowserRouter([
 					{
 						path: '/:id',
 						element: <Game />,
+					},
+					{
+						path: 'tier-lists',
+						element: <Empty />,
+					},
+					{
+						path: 'characters',
+						element: <Empty />,
 					},
 				],
 			},
