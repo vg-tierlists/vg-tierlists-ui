@@ -1,5 +1,5 @@
-import {Link} from 'react-router-dom';
 import {Card, Image, Space, Title} from '@mantine/core';
+import {Link} from 'react-router-dom';
 
 import {Game} from 'api/types';
 

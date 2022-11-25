@@ -1,8 +1,9 @@
-import {createBrowserRouter} from 'react-router-dom';
 import {QueryClient, QueryFunction, QueryKey} from '@tanstack/react-query';
+import {Body, Root} from 'layouts';
+import {createBrowserRouter} from 'react-router-dom';
 
 import {getGame} from 'api';
-import Layout from 'components/Layout';
+import GameNav from 'components/GameNav';
 import {queryClient} from 'config';
 import {Game, Home} from 'pages';
 
@@ -21,16 +22,22 @@ const queryLoader = (queryClient: QueryClient, q: QueryProps) => async () => {
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <Layout />,
+		element: <Root />,
 		children: [
 			{
 				path: '/',
 				element: <Home />,
 			},
 			{
-				path: '/:id',
-				element: <Game />,
+				path: ':id',
+				element: <Body nav={<GameNav />} />,
 				loader: ({params}) => params.id && queryLoader(queryClient, getGame(params.id)),
+				children: [
+					{
+						path: '/:id',
+						element: <Game />,
+					},
+				],
 			},
 		],
 	},

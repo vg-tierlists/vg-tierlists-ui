@@ -23,7 +23,7 @@
 				"groups": [
 					// source: https://dev.to/julioxavierr/sorting-your-imports-with-eslint-3ped
 					// Packages `react` related packages come first.
-					["^react", "^@?\\w"],
+					["^react$", "^@?\\w"],
 					// Internal packages.
 					["^(api|components|config|hooks|pages|util)(/.*|$)"],
 					// Parent imports. Put `..` last.
