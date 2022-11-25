@@ -1,11 +1,11 @@
 import {QueryClient, QueryFunction, QueryKey} from '@tanstack/react-query';
 import {createBrowserRouter} from 'react-router-dom';
 
-import {getGame} from 'api';
+import {getCharacters, getGame, getGames} from 'api';
 import GameNav from 'components/GameNav';
 import {queryClient} from 'config';
 import {Body, Root} from 'layouts';
-import {Characters, Game, Games, TierLists} from 'pages';
+import {Character, Characters, Game, Games, TierLists} from 'pages';
 
 type QueryProps = {
 	queryKey: QueryKey;
@@ -31,16 +31,17 @@ const router = createBrowserRouter([
 					{
 						path: '/',
 						element: <Games />,
+						loader: () => queryLoader(queryClient, getGames()),
 					},
 				],
 			},
 			{
-				path: ':id',
+				path: ':gameId',
 				element: <Body nav={<GameNav />} />,
-				loader: ({params}) => params.id && queryLoader(queryClient, getGame(params.id)),
+				loader: ({params: {gameId}}) => gameId && queryLoader(queryClient, getGame(gameId)),
 				children: [
 					{
-						path: '/:id',
+						path: '/:gameId',
 						element: <Game />,
 					},
 					{
@@ -50,6 +51,14 @@ const router = createBrowserRouter([
 					{
 						path: 'characters',
 						element: <Characters />,
+						loader: ({params: {gameId}}) =>
+							gameId && queryLoader(queryClient, getCharacters(gameId)),
+					},
+					{
+						path: 'characters/:characterId',
+						element: <Character />,
+						loader: ({params: {characterId}}) =>
+							characterId && queryLoader(queryClient, getCharacters(characterId)),
 					},
 				],
 			},
