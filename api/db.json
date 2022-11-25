@@ -18,5 +18,57 @@
 			"slug": "pokemon-sv",
 			"image": "https://upload.wikimedia.org/wikipedia/en/0/00/Pok%C3%A9mon_Scarlet_and_Violet_banner.png"
 		}
+	],
+	"characters": [
+		{
+			"id": "467047de-11a5-44fb-895c-b43d3e8dabe3",
+			"gameId": "arknights",
+			"name": "Windflit",
+			"slug": "windflit",
+			"images": {
+				"sm": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_433_windft.png",
+				"lg": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_433_windft_1.png"
+			}
+		},
+		{
+			"id": "254bc336-0db6-41bc-b812-eb2f2456972d",
+			"gameId": "arknights",
+			"name": "Lumen",
+			"slug": "lumen",
+			"images": {
+				"sm": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_4042_lumen.png",
+				"lg": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_4042_lumen_1.png"
+			}
+		},
+		{
+			"id": "a679ac44-5a87-4335-a1d7-0cacbf3c4d0e",
+			"gameId": "arknights",
+			"name": "Irene",
+			"slug": "irene",
+			"images": {
+				"sm": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_4009_irene.png",
+				"lg": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_4009_irene_1.png"
+			}
+		},
+		{
+			"id": "8e02a074-78ba-4594-bc2d-770532622d88",
+			"gameId": "arknights",
+			"name": "Specter the Unchained",
+			"slug": "specter-the-unchained",
+			"images": {
+				"sm": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_1023_ghost2.png",
+				"lg": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_1023_ghost2_1.png"
+			}
+		},
+		{
+			"id": "8e02a074-78ba-4594-bc2d-770532622d88",
+			"gameId": "arknights",
+			"name": "Horn",
+			"slug": "horn",
+			"images": {
+				"sm": "https://gamepress.gg/arknights/sites/arknights/files/2022-04/char_4039_horn.png",
+				"lg": "https://gamepress.gg/arknights/sites/arknights/files/2022-04/char_4039_horn_1.png"
+			}
+		}
 	]
 }

@@ -2,12 +2,12 @@ import {useCallback} from 'react';
 import {Global, Stack, Tabs, TabsValue, Title} from '@mantine/core';
 import {useLocation, useNavigate} from 'react-router-dom';
 
-import {useCurrentGame} from 'hooks';
+import {useGame} from 'hooks';
 
 import useStyles, {height} from './GameNav.styles';
 
 const GameNav = () => {
-	const {data: game} = useCurrentGame();
+	const {data: game} = useGame();
 	const navigate = useNavigate();
 
 	const {classes} = useStyles();

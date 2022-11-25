@@ -1,4 +1,4 @@
-import {SimpleGrid, Space, Title} from '@mantine/core';
+import {Flex, Space, Title} from '@mantine/core';
 
 import GameCard from 'components/GameCard';
 import {useGames} from 'hooks';
@@ -10,11 +10,11 @@ const Games = () => {
 		<>
 			<Title>Games</Title>
 			<Space h="lg" />
-			<SimpleGrid cols={3}>
+			<Flex gap="md">
 				{games?.map((game) => (
 					<GameCard key={game.id} game={game} />
 				))}
-			</SimpleGrid>
+			</Flex>
 		</>
 	);
 };

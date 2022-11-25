@@ -1,9 +1,9 @@
 import {Title} from '@mantine/core';
 
-import {useCurrentGame} from 'hooks';
+import {useGame} from 'hooks';
 
 const Game = () => {
-	const {data: game} = useCurrentGame();
+	const {data: game} = useGame();
 	return <Title>{game?.id}</Title>;
 };
 

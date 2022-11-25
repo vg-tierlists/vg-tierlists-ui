@@ -35,12 +35,12 @@ const router = createBrowserRouter([
 				],
 			},
 			{
-				path: ':id',
+				path: ':gameId',
 				element: <Body nav={<GameNav />} />,
 				loader: ({params}) => params.id && queryLoader(queryClient, getGame(params.id)),
 				children: [
 					{
-						path: '/:id',
+						path: '/:gameId',
 						element: <Game />,
 					},
 					{

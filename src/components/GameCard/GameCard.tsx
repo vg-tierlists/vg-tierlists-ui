@@ -1,20 +1,19 @@
-import {Card, Image, Space, Title} from '@mantine/core';
+import {Text} from '@mantine/core';
 import {Link} from 'react-router-dom';
 
 import {Game} from 'api/types';
+import ImageCard from 'components/ImageCard';
 
 type Props = {
 	game: Game;
 };
 
 const GameCard = ({game}: Props) => (
-	<Card radius="md" component={Link} to={`/${game.slug}`}>
-		<Card.Section>
-			<Image src={game.image} height={160} alt={game.name} />
-		</Card.Section>
-		<Space h="sm" />
-		<Title order={4}>{game.name}</Title>
-	</Card>
+	<ImageCard src={game.image} component={Link} to={`/${game.slug}`} p="sm" w={250}>
+		<Text size="lg" mt="sm">
+			{game.name}
+		</Text>
+	</ImageCard>
 );
 
 export default GameCard;
