@@ -23,9 +23,9 @@
 				"groups": [
 					// source: https://dev.to/julioxavierr/sorting-your-imports-with-eslint-3ped
 					// Packages `react` related packages come first.
-					["^react", "^@?\\w"],
+					["^react$", "^@?\\w"],
 					// Internal packages.
-					["^(api|components|config|hooks|pages|util)(/.*|$)"],
+					["^(api|components|config|hooks|layouts|pages|util)(/.*|$)"],
 					// Parent imports. Put `..` last.
 					["^\\.\\.(?!/?$)", "^\\.\\./?$"],
 					// Other relative imports. Put same-folder imports and `.` last.
@@ -40,6 +40,7 @@
 		"@typescript-eslint/no-use-before-define": [
 			"error",
 			{"functions": false, "classes": true, "variables": true, "typedefs": true}
-		]
+		],
+		"react/jsx-curly-brace-presence": ["error", "never"]
 	}
 }
