@@ -1,4 +1,4 @@
-import {Tooltip} from '@mantine/core';
+import {Text, Tooltip} from '@mantine/core';
 import {Link} from 'react-router-dom';
 
 import {Character} from 'api/types';
@@ -14,9 +14,11 @@ const CharacterCard = ({character}: Props) => (
 			src={character.images.sm}
 			component={Link}
 			to={character.slug}
+			imageOnly
 			imageProps={{fit: 'contain', height: 100}}
+			maw={100}
 		>
-			<></>
+			<Text size="xs">{character.name}</Text>
 		</ImageCard>
 	</Tooltip>
 );

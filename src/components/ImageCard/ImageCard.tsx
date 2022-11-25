@@ -5,15 +5,16 @@ type Props = CardProps & {
 	src: string;
 	imageProps?: ImageProps;
 	children?: ReactNode;
+	imageOnly?: boolean;
 };
 
 const ImageCard = forwardRef<HTMLDivElement, Props>(
-	({src, imageProps, children, ...other}, ref) => (
+	({src, imageProps, children, imageOnly = false, ...other}, ref) => (
 		<Card radius="sm" ref={ref} {...other}>
 			<Card.Section>
 				<Image src={src} height={160} styles={{image: {objectPosition: 'top'}}} {...imageProps} />
 			</Card.Section>
-			{children}
+			{imageOnly || children}
 		</Card>
 	)
 );

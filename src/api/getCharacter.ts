@@ -5,7 +5,7 @@ import {API_URL} from 'config';
 
 export default function getCharacter(charId: string) {
 	return {
-		queryKey: ['games', charId, 'characters'],
+		queryKey: ['characters', charId],
 		queryFn: () => {
 			return axios
 				.get(`${API_URL}/characters/${charId}`)

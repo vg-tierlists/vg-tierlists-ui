@@ -1,9 +1,9 @@
 import {useParams} from 'react-router-dom';
 
 export default function useCharacterIdParam() {
-	const {charId} = useParams();
-	if (!charId) {
-		throw Error('No id exists');
+	const {characterId} = useParams();
+	if (!characterId) {
+		throw Error('No character ID');
 	}
-	return charId;
+	return characterId;
 }
