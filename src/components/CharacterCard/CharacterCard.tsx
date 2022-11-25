@@ -16,9 +16,7 @@ const CharacterCard = ({character}: Props) => (
 			to={character.slug}
 			imageProps={{fit: 'contain', height: 100}}
 		>
-			{/*<Title order={3} mt="sm">*/}
-			{/*	{character.name}*/}
-			{/*</Title>*/}
+			<></>
 		</ImageCard>
 	</Tooltip>
 );

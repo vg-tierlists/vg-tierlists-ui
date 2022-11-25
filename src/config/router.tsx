@@ -6,6 +6,7 @@ import GameNav from 'components/GameNav';
 import {queryClient} from 'config';
 import {Body, Root} from 'layouts';
 import {Characters, Game, Games, TierLists} from 'pages';
+import Character from 'pages/Character';
 
 type QueryProps = {
 	queryKey: QueryKey;
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
 					{
 						path: 'characters',
 						element: <Characters />,
+					},
+					{
+						path: 'characters/:charId',
+						element: <Character />,
 					},
 				],
 			},
