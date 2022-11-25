@@ -1,14 +1,13 @@
 import {createStyles} from '@mantine/styles';
 
-export default createStyles((theme) => {
-	const padding = theme.spacing.md;
+export const height = 104;
 
-	return {
-		root: {},
-		title: {
-			padding: theme.spacing.md,
-			// borderBottom: `1px solid ${theme.colors.dark[4]}`,
-		},
-		tabs: {},
-	};
-});
+export default createStyles((theme) => ({
+	root: {
+		height: 'var(--nav-height, 100%)',
+	},
+	title: {
+		padding: theme.spacing.md,
+	},
+	tabs: {},
+}));

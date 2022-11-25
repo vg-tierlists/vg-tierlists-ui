@@ -1,9 +1,10 @@
-import {Tabs, Title} from '@mantine/core';
+import {useCallback} from 'react';
+import {Global, Stack, Tabs, TabsValue, Title} from '@mantine/core';
 import {useLocation, useNavigate} from 'react-router-dom';
 
 import {useCurrentGame} from 'hooks';
 
-import useStyles from './GameNav.styles';
+import useStyles, {height} from './GameNav.styles';
 
 const GameNav = () => {
 	const {data: game} = useCurrentGame();
@@ -12,34 +13,38 @@ const GameNav = () => {
 	const {classes} = useStyles();
 	const {pathname} = useLocation();
 	const path = pathname.split('/');
-
-	console.log({
-		pathname,
-		path,
-		length: path.length,
-	});
+	const handleTabChange = useCallback(
+		(v: TabsValue) => {
+			navigate(v || '');
+		},
+		[navigate]
+	);
 
 	return (
-		<div className={classes.root}>
+		<Stack className={classes.root} justify="space-between" spacing={0}>
 			<div className={classes.title}>
-				<Title>{game?.name}</Title>
+				<Title order={2}>{game?.name}</Title>
 			</div>
 			<Tabs
 				className={classes.tabs}
-				onTabChange={(v) => {
-					navigate(v || '');
-				}}
+				onTabChange={handleTabChange}
 				value={path.length > 2 ? path.pop() : pathname}
 			>
 				<Tabs.List>
-					<Tabs.Tab defaultChecked value={`/${game?.slug}`}>
-						Game Info
-					</Tabs.Tab>
+					<Tabs.Tab value={`/${game?.slug}`}>Game Info</Tabs.Tab>
 					<Tabs.Tab value="tier-lists">Tier Lists</Tabs.Tab>
 					<Tabs.Tab value="characters">Characters</Tabs.Tab>
 				</Tabs.List>
 			</Tabs>
-		</div>
+
+			<Global
+				styles={() => ({
+					':root': {
+						[`--nav-height`]: `${height}px`,
+					},
+				})}
+			/>
+		</Stack>
 	);
 };
 

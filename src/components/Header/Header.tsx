@@ -1,13 +1,18 @@
-import {Header as MantineHeader, Title} from '@mantine/core';
+import {ActionIcon, Header as MantineHeader} from '@mantine/core';
+import {IconHome} from '@tabler/icons';
+import {Link} from 'react-router-dom';
 
 const Header = () => (
 	<MantineHeader
-		height={60}
+		height={64}
+		p="xs"
 		sx={(theme) => ({
-			backgroundColor: theme.colors.dark[6],
+			backgroundColor: theme.colors.dark[5],
 		})}
 	>
-		<Title>Tier Lists</Title>
+		<ActionIcon size="xl" variant="transparent" component={Link} to="/">
+			<IconHome size={36}></IconHome>
+		</ActionIcon>
 	</MantineHeader>
 );
 

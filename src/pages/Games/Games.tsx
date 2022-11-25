@@ -3,7 +3,7 @@ import {SimpleGrid, Space, Title} from '@mantine/core';
 import GameCard from 'components/GameCard';
 import {useGames} from 'hooks';
 
-const Home = () => {
+const Games = () => {
 	const {data: games} = useGames();
 
 	return (
@@ -19,4 +19,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default Games;

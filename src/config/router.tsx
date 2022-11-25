@@ -1,11 +1,11 @@
 import {QueryClient, QueryFunction, QueryKey} from '@tanstack/react-query';
-import {Body, Root} from 'layouts';
 import {createBrowserRouter} from 'react-router-dom';
 
 import {getGame} from 'api';
 import GameNav from 'components/GameNav';
 import {queryClient} from 'config';
-import {Characters, Game, Home, TierLists} from 'pages';
+import {Body, Root} from 'layouts';
+import {Characters, Game, Games, TierLists} from 'pages';
 
 type QueryProps = {
 	queryKey: QueryKey;
@@ -26,7 +26,13 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: '/',
-				element: <Home />,
+				element: <Body />,
+				children: [
+					{
+						path: '/',
+						element: <Games />,
+					},
+				],
 			},
 			{
 				path: ':id',
