@@ -1,1 +1,1 @@
-export {default} from 'components/CharacterCard/CharacterCard';
+export {default} from './CharacterCard';

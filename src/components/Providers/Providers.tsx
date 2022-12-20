@@ -3,10 +3,10 @@ import {MantineProvider} from '@mantine/core';
 import {QueryClientProvider} from '@tanstack/react-query';
 import {ReactQueryDevtools} from '@tanstack/react-query-devtools';
 
-import queryClientBuilder from 'config/queryClient';
+import buildQueryClient from 'config/queryClient';
 
 const Providers = ({children}: PropsWithChildren) => {
-	const [queryClient] = useState(queryClientBuilder);
+	const [queryClient] = useState(buildQueryClient);
 	return (
 		<MantineProvider withGlobalStyles withNormalizeCSS theme={{colorScheme: 'dark'}}>
 			<QueryClientProvider client={queryClient}>

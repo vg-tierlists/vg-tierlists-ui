@@ -1,8 +1,8 @@
 import {Flex, Space, Title} from '@mantine/core';
 
-import CharacterCard from 'components/CharacterCard';
+import {CharacterCard} from 'components';
 import {useCharacters} from 'hooks';
-import GameLayout from 'layouts/GameLayout';
+import {GameLayout} from 'layouts';
 import {NextPageWithLayout} from 'pages/_app';
 
 const CharactersPage: NextPageWithLayout = () => {

@@ -2,8 +2,8 @@ import {ReactElement, ReactNode} from 'react';
 import type {NextPage} from 'next';
 import type {AppProps} from 'next/app';
 
-import Providers from 'components/Providers';
-import DefaultLayout from 'layouts/DefaultLayout';
+import {Providers} from 'components';
+import {DefaultLayout} from 'layouts';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 	getLayout?: (page: ReactElement) => ReactNode;

@@ -1,7 +1,7 @@
 import {Image, Title} from '@mantine/core';
 
 import {useCharacter} from 'hooks';
-import GameLayout from 'layouts/GameLayout';
+import {GameLayout} from 'layouts';
 import {NextPageWithLayout} from 'pages/_app';
 
 const CharacterPage: NextPageWithLayout = () => {

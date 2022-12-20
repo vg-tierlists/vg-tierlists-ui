@@ -1,7 +1,7 @@
 import {Title} from '@mantine/core';
 
-import useGame from 'hooks/useGame';
-import GameLayout from 'layouts/GameLayout';
+import {useGame} from 'hooks';
+import {GameLayout} from 'layouts';
 import {NextPageWithLayout} from 'pages/_app';
 
 const GamePage: NextPageWithLayout = () => {

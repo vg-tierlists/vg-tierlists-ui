@@ -1,7 +1,7 @@
 import {Container} from '@mantine/core';
 import type {ReactElement} from 'react';
 
-import AppShell from 'components/AppShell/AppShell';
+import {AppShell} from 'components';
 
 const DefaultLayout = (page: ReactElement) => (
 	<AppShell>

@@ -1,7 +1,6 @@
 import {AppShell as MantineAppShell, AppShellProps} from '@mantine/core';
 
-import Footer from 'components/Footer';
-import Header from 'components/Header';
+import {Footer, Header} from 'components';
 
 import useStyles from './AppShell.styles';
 

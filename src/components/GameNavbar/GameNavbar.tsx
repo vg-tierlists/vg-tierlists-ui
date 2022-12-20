@@ -1,8 +1,7 @@
 import {Navbar, Text} from '@mantine/core';
 
-import NavButton from 'components/NavButton';
-import useGame from 'hooks/useGame';
-import useGameNav from 'hooks/useGameNav';
+import {NavButton} from 'components';
+import {useGame, useGameNav} from 'hooks';
 
 const GameNavbar = () => {
 	const {data: game} = useGame();

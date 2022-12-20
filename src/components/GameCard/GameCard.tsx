@@ -2,7 +2,7 @@ import {Text} from '@mantine/core';
 import Link from 'next/link';
 
 import {Game} from 'api/types';
-import ImageCard from 'components/ImageCard';
+import {ImageCard} from 'components';
 
 type Props = {
 	game: Game;

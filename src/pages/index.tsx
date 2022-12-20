@@ -1,9 +1,9 @@
 import {Container, Flex, Space, Text, Title} from '@mantine/core';
 
-import GameCard from 'components/GameCard';
-import useGames from 'hooks/useGames';
+import {GameCard} from 'components';
+import {useGames} from 'hooks';
 
-export default function Home() {
+const Home = () => {
 	const {isLoading, isError, data: games} = useGames();
 
 	if (isLoading) {
@@ -25,4 +25,6 @@ export default function Home() {
 			</Flex>
 		</Container>
 	);
-}
+};
+
+export default Home;

@@ -1,6 +1,6 @@
 import {Title} from '@mantine/core';
 
-import GameLayout from 'layouts/GameLayout';
+import {GameLayout} from 'layouts';
 import {NextPageWithLayout} from 'pages/_app';
 
 const TierListsPage: NextPageWithLayout = () => <Title>Tier Lists</Title>;

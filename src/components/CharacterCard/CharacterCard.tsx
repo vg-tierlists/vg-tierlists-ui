@@ -2,8 +2,8 @@ import {Text, Tooltip} from '@mantine/core';
 import Link from 'next/link';
 
 import {Character} from 'api/types';
-import ImageCard from 'components/ImageCard/ImageCard';
-import useGameParam from 'hooks/useGameParam';
+import {ImageCard} from 'components';
+import {useGameParam} from 'hooks';
 
 type Props = {
 	character: Character;
