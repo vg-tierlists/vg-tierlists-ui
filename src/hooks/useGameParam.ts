@@ -1,8 +1,5 @@
-import {useRouter} from 'next/router';
+import useParam from 'hooks/useParam';
 
-export default function useGameParam(): string {
-	const {
-		query: {game},
-	} = useRouter();
-	return (game as string) ?? '';
+export default function useGameParam() {
+	return useParam('game');
 }
