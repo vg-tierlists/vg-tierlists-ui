@@ -1,6 +1,6 @@
 import {ActionIcon, Header as MantineHeader} from '@mantine/core';
 import {IconHome} from '@tabler/icons';
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
 
 const Header = () => (
 	<MantineHeader
@@ -10,7 +10,7 @@ const Header = () => (
 			backgroundColor: theme.colors.dark[5],
 		})}
 	>
-		<ActionIcon size="xl" variant="transparent" component={Link} to="/">
+		<ActionIcon size="xl" variant="transparent" component={Link} href="/">
 			<IconHome size={36}></IconHome>
 		</ActionIcon>
 	</MantineHeader>

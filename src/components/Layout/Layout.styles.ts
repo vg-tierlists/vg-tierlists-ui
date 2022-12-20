@@ -1,14 +1,8 @@
 import {createStyles} from '@mantine/styles';
 
-export default createStyles((theme) => ({
-	body: {
-		flex: 1,
-
-		width: '100vw',
-		boxSizing: 'border-box',
-		padding: theme.spacing.md,
-
-		// required for 'fixed' layout elements
+export default createStyles({
+	main: {
+		// required to push footer to bottom
 		minHeight:
 			'calc(100vh' +
 			' - var(--mantine-header-height, 0px)' +
@@ -16,4 +10,4 @@ export default createStyles((theme) => ({
 			' - var(--nav-height, 0px)' +
 			')',
 	},
-}));
+});
