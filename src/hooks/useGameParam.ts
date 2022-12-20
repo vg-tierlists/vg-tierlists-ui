@@ -1,11 +1,8 @@
 import {useRouter} from 'next/router';
 
-export default function useGameParam() {
+export default function useGameParam(): string {
 	const {
-		query: {slug: gameId},
+		query: {game},
 	} = useRouter();
-	if (!gameId) {
-		throw Error('No game ID');
-	}
-	return gameId as string;
+	return (game as string) ?? '';
 }
