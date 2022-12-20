@@ -1,24 +1,37 @@
+api/live.json
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
 /build
-/api/live.json
 
-# Created by https://www.toptal.com/developers/gitignore/api/react
-# Edit at https://www.toptal.com/developers/gitignore?templates=react
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
 
-### react ###
-.DS_*
-*.log
-logs
-**/*.backup.*
-**/*.back.*
+# local env files
+.env*.local
 
-node_modules
-bower_components
+# vercel
+.vercel
 
-*.sublime*
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
-psd
-thumb
-sketch
-
-# End of https://www.toptal.com/developers/gitignore/api/react
-
+# vscode
+.vscode/

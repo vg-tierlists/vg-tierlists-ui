@@ -3,13 +3,6 @@ import axios, {AxiosResponse} from 'axios';
 import {Character} from 'api/types';
 import {API_URL} from 'config';
 
-export default function getCharacter(charId: string) {
-	return {
-		queryKey: ['characters', charId],
-		queryFn: () => {
-			return axios
-				.get(`${API_URL}/characters/${charId}`)
-				.then((res: AxiosResponse<Character>) => res.data);
-		},
-	};
+export default function getCharacter(id: string) {
+	return axios.get(`${API_URL}/characters/${id}`).then((res: AxiosResponse<Character>) => res.data);
 }

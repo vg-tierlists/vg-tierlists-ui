@@ -1,15 +1,15 @@
 import {Text} from '@mantine/core';
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
 
 import {Game} from 'api/types';
-import ImageCard from 'components/ImageCard';
+import {ImageCard} from 'components';
 
 type Props = {
 	game: Game;
 };
 
 const GameCard = ({game}: Props) => (
-	<ImageCard src={game.image} component={Link} to={`/${game.slug}`} p="sm" w={250}>
+	<ImageCard src={game.image} component={Link} href={`/${game.slug}`} p="sm" w={250}>
 		<Text size="lg" mt="sm">
 			{game.name}
 		</Text>

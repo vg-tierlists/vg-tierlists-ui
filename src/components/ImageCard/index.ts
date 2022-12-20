@@ -1,1 +1,1 @@
-export {default} from 'components/ImageCard/ImageCard';
+export {default} from './ImageCard';

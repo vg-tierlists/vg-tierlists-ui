@@ -1,2 +1,2 @@
-export {default as Body} from './Body';
-export {default as Root} from './Root';
+export {default as DefaultLayout} from './DefaultLayout';
+export {default as GameLayout} from './GameLayout';
