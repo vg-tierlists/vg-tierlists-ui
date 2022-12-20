@@ -15,13 +15,13 @@ export default function useGameNav() {
 	const characters = {
 		label: 'Characters',
 		href: `/${game?.slug}/characters`,
-		active: pathname == '/[game]/characters',
+		active: pathname.startsWith('/[game]/characters'),
 	};
 
 	const tierLists = {
 		label: 'Tier Lists',
 		href: `/${game?.slug}/tier-lists`,
-		active: pathname == '/[game]/tier-lists',
+		active: pathname.startsWith('/[game]/tier-lists'),
 	};
 
 	return {links: [home, characters, tierLists], home, characters, tierLists};
