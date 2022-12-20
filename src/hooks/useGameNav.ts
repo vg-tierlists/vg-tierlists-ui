@@ -1,9 +1,9 @@
 import {useRouter} from 'next/router';
 
-import useCurrentGame from 'hooks/useCurrentGame';
+import useGame from './useGame';
 
 export default function useGameNav() {
-	const {data: game} = useCurrentGame();
+	const {data: game} = useGame();
 	const {pathname} = useRouter();
 
 	const home = {

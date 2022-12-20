@@ -1,11 +1,11 @@
 import {Navbar, Text} from '@mantine/core';
 
 import NavButton from 'components/NavButton';
-import useCurrentGame from 'hooks/useCurrentGame';
+import useGame from 'hooks/useGame';
 import useGameNav from 'hooks/useGameNav';
 
 const GameNavbar = () => {
-	const {data: game} = useCurrentGame();
+	const {data: game} = useGame();
 	const {links} = useGameNav();
 	return (
 		<Navbar width={{base: 300}}>

@@ -1,11 +1,11 @@
 import {Title} from '@mantine/core';
 
-import useCurrentGame from 'hooks/useCurrentGame';
+import useGame from 'hooks/useGame';
 import GameLayout from 'layouts/GameLayout';
 import {NextPageWithLayout} from 'pages/_app';
 
 const GamePage: NextPageWithLayout = () => {
-	const {data: game} = useCurrentGame();
+	const {data: game} = useGame();
 	return <Title>{game?.name}</Title>;
 };
 

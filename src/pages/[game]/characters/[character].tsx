@@ -1,22 +1,20 @@
 import {Image, Title} from '@mantine/core';
 
-import useCurrentCharacter from 'hooks/useCurrentCharacter';
+import {useCharacter} from 'hooks';
 import GameLayout from 'layouts/GameLayout';
 import {NextPageWithLayout} from 'pages/_app';
 
 const CharacterPage: NextPageWithLayout = () => {
-	const {isSuccess, data: character} = useCurrentCharacter();
+	const {isSuccess, data: character} = useCharacter();
 
 	if (!isSuccess) {
 		return <></>;
 	}
 
-	console.log(character);
-
 	return (
 		<>
-			<Title>{character?.name}</Title>
-			<Image src={character?.images?.lg} width={800}></Image>
+			<Title>{character.name}</Title>
+			<Image src={character.images.lg} width={800} placeholder={character.name}></Image>
 		</>
 	);
 };
