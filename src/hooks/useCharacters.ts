@@ -1,9 +1,9 @@
 import {useQuery} from '@tanstack/react-query';
 
 import getCharacters from 'api/getCharacters';
-import useGameIdParam from 'hooks/useGameIdParam';
+import useGameParam from 'hooks/useGameParam';
 
 export default function useCharacters() {
-	const gameId = useGameIdParam();
+	const gameId = useGameParam();
 	return useQuery(getCharacters(gameId));
 }
