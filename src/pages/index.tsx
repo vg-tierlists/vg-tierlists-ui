@@ -4,7 +4,7 @@ import type {GetStaticProps} from 'next';
 import {getGames, queryKeys} from 'api';
 import {GameCard} from 'components';
 import {useGames} from 'hooks';
-import queryStaticProps from 'utils/queryStaticProps';
+import {queryStaticProps} from 'utils';
 
 export const getStaticProps: GetStaticProps = () =>
 	queryStaticProps({

@@ -5,9 +5,7 @@ import {getGame, getGames, queryKeys} from 'api';
 import {useGame} from 'hooks';
 import {GameLayout} from 'layouts';
 import type {NextPageWithLayout} from 'pages/_app';
-import {getParam} from 'utils';
-import queryStaticPaths from 'utils/queryStaticPaths';
-import queryStaticProps from 'utils/queryStaticProps';
+import {getParam, queryStaticPaths, queryStaticProps} from 'utils';
 
 export const getStaticPaths: GetStaticPaths = () =>
 	queryStaticPaths(getGames, (game) => `/${game.slug}`);

@@ -32,6 +32,12 @@
 				]
 			}
 		],
-		"sort-imports": "off"
+		"sort-imports": "off",
+		"no-restricted-imports": [
+			"warn",
+			{
+				"patterns": ["components/**/*", "config/**/*", "hooks/**/*", "layouts/**/*", "utils/**/*"]
+			}
+		]
 	}
 }

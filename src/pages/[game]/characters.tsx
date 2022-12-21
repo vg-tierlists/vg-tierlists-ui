@@ -6,9 +6,7 @@ import {CharacterCard} from 'components';
 import {useCharacters} from 'hooks';
 import {GameLayout} from 'layouts';
 import {NextPageWithLayout} from 'pages/_app';
-import {getParam} from 'utils';
-import queryStaticPaths from 'utils/queryStaticPaths';
-import queryStaticProps from 'utils/queryStaticProps';
+import {getParam, queryStaticPaths, queryStaticProps} from 'utils';
 
 export const getStaticPaths: GetStaticPaths = () =>
 	queryStaticPaths(getGames, (game) => `/${game.slug}/characters`);

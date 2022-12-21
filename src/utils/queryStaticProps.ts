@@ -1,9 +1,8 @@
-import {dehydrate} from '@tanstack/query-core';
-import {FetchQueryOptions} from '@tanstack/query-core/src/types';
+import {dehydrate, FetchQueryOptions} from '@tanstack/query-core';
 
-import {ISR_REVALIDATE_TIME} from 'config';
-import buildQueryClient from 'config/queryClient';
-import WithRequired from 'utils/WithRequired';
+import {buildQueryClient, ISR_REVALIDATE_TIME} from 'config';
+
+import WithRequired from './WithRequired';
 
 type Query = WithRequired<FetchQueryOptions, 'queryFn' | 'queryKey'>;
 

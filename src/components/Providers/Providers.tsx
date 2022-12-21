@@ -3,7 +3,7 @@ import {MantineProvider} from '@mantine/core';
 import {Hydrate, QueryClientProvider} from '@tanstack/react-query';
 import {ReactQueryDevtools} from '@tanstack/react-query-devtools';
 
-import buildQueryClient from 'config/queryClient';
+import {buildQueryClient} from 'config';
 
 type Props = {
 	pageProps: any;
