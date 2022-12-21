@@ -1,15 +1,22 @@
-import {useQuery} from '@tanstack/react-query';
+import {useQuery, UseQueryResult} from '@tanstack/react-query';
 
-import {getCharacters} from 'api';
+import {getCharacters, queryKeys} from 'api';
+import {Character} from 'api/types';
 
-import {queryKey as parentQueryKey} from './useGame';
 import useGameParam from './useGameParam';
 
-export const queryKey = (gameId: string) => [...parentQueryKey(gameId), 'characters'];
+type UseCharactersResult = UseQueryResult<Character[]> & {
+	characters?: Character[];
+};
 
-export default function useCharacters() {
+export default function useCharacters(): UseCharactersResult {
 	const gameId = useGameParam();
-	return useQuery(queryKey(gameId), () => getCharacters(gameId), {
+	const result = useQuery(queryKeys.characters(gameId), () => getCharacters(gameId), {
 		enabled: gameId.length > 0,
 	});
+
+	return {
+		...result,
+		characters: result.data,
+	};
 }

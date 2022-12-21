@@ -12,7 +12,7 @@ const ImageCard = forwardRef<HTMLDivElement, Props>(
 	({src, imageProps, children, size = 120, ...props}, ref) => (
 		<Card radius="sm" p="xs" ref={ref} {...props} maw={size} miw={size}>
 			<Card.Section>
-				<Image src={src} {...imageProps} />
+				<Image src={src} {...imageProps} w={size} />
 			</Card.Section>
 			{children && <Box mt="xs">{children}</Box>}
 		</Card>

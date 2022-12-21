@@ -1,9 +1,16 @@
-import {useQuery} from '@tanstack/react-query';
+import {useQuery, UseQueryResult} from '@tanstack/react-query';
 
-import {getGames} from 'api';
+import {getGames, queryKeys} from 'api';
+import {Game} from 'api/types';
 
-export const queryKey = ['games'];
+type UseGamesResult = UseQueryResult<Game[]> & {
+	games?: Game[];
+};
 
-export default function useGames() {
-	return useQuery(queryKey, () => getGames());
+export default function useGames(): UseGamesResult {
+	const result = useQuery(queryKeys.games(), getGames);
+	return {
+		...result,
+		games: result.data,
+	};
 }

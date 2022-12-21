@@ -9,14 +9,14 @@ export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 	getLayout?: (page: ReactElement) => ReactNode;
 };
 
-type AppPropsWithLayout = AppProps & {
+type AppPropsWithLayout = Omit<AppProps, 'Component'> & {
 	Component: NextPageWithLayout;
 };
 
 const App = ({Component, pageProps}: AppPropsWithLayout) => {
 	const getLayout = Component.getLayout || DefaultLayout;
 
-	return <Providers>{getLayout(<Component {...pageProps} />)}</Providers>;
+	return <Providers pageProps={pageProps}>{getLayout(<Component {...pageProps} />)}</Providers>;
 };
 
 export default App;

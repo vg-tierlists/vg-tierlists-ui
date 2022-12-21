@@ -1,34 +1,28 @@
 import {Flex, Space, Title} from '@mantine/core';
 import {GetStaticPaths, GetStaticProps} from 'next';
-import {getParam} from 'utils';
 
-import {getCharacters, getGames} from 'api';
-import {Character} from 'api/types';
+import {getCharacters, getGames, queryKeys} from 'api';
 import {CharacterCard} from 'components';
+import {useCharacters} from 'hooks';
 import {GameLayout} from 'layouts';
 import {NextPageWithLayout} from 'pages/_app';
+import {getParam} from 'utils';
+import queryStaticPaths from 'utils/queryStaticPaths';
+import queryStaticProps from 'utils/queryStaticProps';
 
-type Props = {
-	characters: Character[];
+export const getStaticPaths: GetStaticPaths = () =>
+	queryStaticPaths(getGames, (game) => `/${game.slug}/characters`);
+
+export const getStaticProps: GetStaticProps = ({params}) => {
+	const game = getParam(params!!, 'game');
+	return queryStaticProps({
+		queryKey: queryKeys.characters(game),
+		queryFn: () => getCharacters(game),
+	});
 };
 
-export const getStaticPaths: GetStaticPaths = () => {
-	return getGames()
-		.then((games) => games.map((game) => `/${game.slug}/characters`))
-		.then((paths) => ({
-			paths,
-			fallback: false,
-		}));
-};
-
-export const getStaticProps: GetStaticProps<Props> = ({params}) => {
-	return getCharacters(getParam(params!!, 'game')).then((characters) => ({
-		props: {characters},
-		revalidate: 10,
-	}));
-};
-
-const CharactersPage: NextPageWithLayout<Props> = ({characters}) => {
+const CharactersPage: NextPageWithLayout = () => {
+	const {characters} = useCharacters();
 	return (
 		<>
 			<Title>Characters</Title>

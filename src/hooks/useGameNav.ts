@@ -3,7 +3,7 @@ import {useRouter} from 'next/router';
 import useGame from './useGame';
 
 export default function useGameNav() {
-	const {data: game} = useGame();
+	const {game} = useGame();
 	const {pathname} = useRouter();
 
 	const home = {

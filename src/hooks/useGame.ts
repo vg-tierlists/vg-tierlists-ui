@@ -1,15 +1,21 @@
-import {useQuery} from '@tanstack/react-query';
+import {useQuery, UseQueryResult} from '@tanstack/react-query';
 
-import {getGame} from 'api';
+import {getGame, queryKeys} from 'api';
+import {Game} from 'api/types';
 
 import useGameParam from './useGameParam';
-import {queryKey as parentQueryKey} from './useGames';
 
-export const queryKey = (id: string) => [...parentQueryKey, id];
+type UseGameResult = UseQueryResult<Game> & {
+	game?: Game;
+};
 
-export default function useGame() {
+export default function useGame(): UseGameResult {
 	const id = useGameParam();
-	return useQuery(queryKey(id), () => getGame(id), {
+	const result = useQuery(queryKeys.game(id), () => getGame(id), {
 		enabled: id.length > 0,
 	});
+	return {
+		...result,
+		game: result.data,
+	};
 }
