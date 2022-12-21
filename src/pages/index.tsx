@@ -1,18 +1,33 @@
-import {Container, Flex, Space, Text, Title} from '@mantine/core';
+import {Container, Flex, Space, Title} from '@mantine/core';
+import type {GetStaticProps} from 'next';
 
+import {getGames} from 'api';
+import {Game} from 'api/types';
 import {GameCard} from 'components';
-import {useGames} from 'hooks';
 
-const Home = () => {
-	const {isLoading, isError, data: games} = useGames();
+type Props = {
+	games: Game[];
+};
 
-	if (isLoading) {
-		return <Text>Loading...</Text>;
-	}
+export const getStaticProps: GetStaticProps<Props> = () => {
+	return getGames().then((games) => ({
+		props: {
+			games,
+		},
+		revalidate: 10,
+	}));
+};
 
-	if (isError) {
-		return <Text>Error...</Text>;
-	}
+const Home = ({games}: Props) => {
+	// const {isLoading, isError, data: games} = useGames();
+	//
+	// if (isLoading) {
+	// 	return <Text>Loading...</Text>;
+	// }
+	//
+	// if (isError) {
+	// 	return <Text>Error...</Text>;
+	// }
 
 	return (
 		<Container>
