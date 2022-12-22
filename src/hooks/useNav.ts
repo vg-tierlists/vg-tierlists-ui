@@ -2,7 +2,20 @@ import {useRouter} from 'next/router';
 
 import useGame from './useGame';
 
-export default function useGameNav() {
+type Nav = {
+	label: string;
+	href: string;
+	active: boolean;
+};
+
+type UseNav = {
+	links: Nav[];
+	home: Nav;
+	characters: Nav;
+	tierLists: Nav;
+};
+
+export default function useNav(): UseNav {
 	const {game} = useGame();
 	const {pathname} = useRouter();
 
