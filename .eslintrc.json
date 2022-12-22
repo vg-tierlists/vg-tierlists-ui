@@ -34,9 +34,16 @@
 		],
 		"sort-imports": "off",
 		"no-restricted-imports": [
-			"warn",
+			"error",
 			{
 				"patterns": ["components/**/*", "config/**/*", "hooks/**/*", "layouts/**/*", "utils/**/*"]
+			}
+		],
+		"react/self-closing-comp": [
+			"error",
+			{
+				"component": true,
+				"html": true
 			}
 		]
 	}

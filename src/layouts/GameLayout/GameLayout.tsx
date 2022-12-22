@@ -1,11 +1,14 @@
 import {ReactElement} from 'react';
-import {Container} from '@mantine/core';
+import {Box, Container} from '@mantine/core';
 
-import {AppShell, GameNavbar} from 'components';
+import {AppShell, Breadcrumbs, GameNavbar} from 'components';
 
 const GameLayout = (page: ReactElement) => (
 	<AppShell navbar={<GameNavbar />}>
-		<Container fluid>{page}</Container>
+		<Container fluid>
+			<Breadcrumbs />
+			<Box pt="md">{page}</Box>
+		</Container>
 	</AppShell>
 );
 

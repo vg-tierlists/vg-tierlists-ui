@@ -1,4 +1,5 @@
 export {default as AppShell} from './AppShell';
+export {default as Breadcrumbs} from './Breadcrumbs';
 export {default as CharacterCard} from './CharacterCard';
 export {default as Footer} from './Footer';
 export {default as GameCard} from './GameCard';
