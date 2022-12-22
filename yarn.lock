@@ -374,7 +374,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/styles@npm:5.9.5":
+"@mantine/styles@npm:5.9.5, @mantine/styles@npm:^5.9.5":
   version: 5.9.5
   resolution: "@mantine/styles@npm:5.9.5"
   dependencies:
@@ -725,7 +725,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-core@npm:4.20.4":
+"@tanstack/query-core@npm:4.20.4, @tanstack/query-core@npm:^4.20.4":
   version: 4.20.4
   resolution: "@tanstack/query-core@npm:4.20.4"
   checksum: bdb652296e4093d8cb042a67b9c035bc0a756e09a3b12aeb070068b07adc1c71174c2e6108f2a8c3322a26cb73ba57f431326aa0b813c81621674b9cc208cd93
@@ -4859,13 +4859,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vg-tierlists-ui@workspace:."
   dependencies:
+    "@emotion/cache": ^11.10.5
     "@emotion/react": ^11.10.5
+    "@emotion/serialize": ^1.1.1
     "@emotion/server": ^11.10.0
+    "@emotion/utils": ^1.2.0
     "@mantine/core": ^5.9.5
     "@mantine/hooks": ^5.9.5
     "@mantine/next": ^5.9.5
+    "@mantine/styles": ^5.9.5
     "@next/font": ^13.0.7
     "@tabler/icons": ^1.117.0
+    "@tanstack/query-core": ^4.20.4
     "@tanstack/react-query": ^4.20.4
     "@tanstack/react-query-devtools": ^4.20.4
     "@types/node": ^16.18.10
