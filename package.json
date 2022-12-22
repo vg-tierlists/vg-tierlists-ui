@@ -12,8 +12,7 @@
 		"lint:fix": "next lint --fix",
 		"format": "prettier --write --ignore-unknown .",
 		"format:check": "prettier --check --ignore-unknown .",
-		"preapi": "cp api/db.json api/live.json",
-		"api": "json-server -p 8080 api/live.json --id slug",
+		"api": "cp api/db.json api/live.json && json-server -p 8080 api/live.json --id slug",
 		"api:save": "cp api/live.json api/db.json",
 		"api:watch": "npm run api -- -w"
 	},
@@ -49,10 +48,10 @@
 	},
 	"lint-staged": {
 		"*.{ts,tsx}": [
-			"eslint",
-			"prettier --write --ignore-unknown"
+			"yarn eslint",
+			"yarn prettier --write --ignore-unknown"
 		],
-		"!*.{ts,tsx}": "prettier --write --ignore-unknown"
+		"!*.{ts,tsx}": "yarn prettier --write --ignore-unknown"
 	},
 	"browserslist": {
 		"production": [
