@@ -1,20 +1,20 @@
 import {forwardRef, ReactNode} from 'react';
-import {Card, CardProps, createPolymorphicComponent, Image, ImageProps} from '@mantine/core';
+import {Box, Card, CardProps, createPolymorphicComponent, Image, ImageProps} from '@mantine/core';
 
 type Props = CardProps & {
 	src: string;
 	imageProps?: ImageProps;
 	children?: ReactNode;
-	imageOnly?: boolean;
+	size?: number;
 };
 
 const ImageCard = forwardRef<HTMLDivElement, Props>(
-	({src, imageProps, children, imageOnly = false, ...other}, ref) => (
-		<Card radius="sm" ref={ref} {...other}>
+	({src, imageProps, children, size = 120, ...props}, ref) => (
+		<Card radius="sm" p="xs" ref={ref} {...props} maw={size} miw={size}>
 			<Card.Section>
-				<Image src={src} height={160} styles={{image: {objectPosition: 'top'}}} {...imageProps} />
+				<Image src={src} {...imageProps} w={size} />
 			</Card.Section>
-			{imageOnly || children}
+			{children && <Box mt="xs">{children}</Box>}
 		</Card>
 	)
 );

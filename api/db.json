@@ -4,13 +4,13 @@
 			"id": "e893c2b9-9e32-4b6c-a9c1-29507c9e5b7c",
 			"name": "Arknights",
 			"slug": "arknights",
-			"image": "https://webusstatic.yo-star.com/ark_us_web/assets/166746597437316197/3e1aaf3f7ea64ee4064b7c13848420b3.jpg"
+			"image": "https://img1.ak.crunchyroll.com/i/spire3/a3bc7ccd6bbb2e675eecc2b65bd626311641742073_main.jpg"
 		},
 		{
 			"id": "33f5c961-5d4c-4183-8237-392eec0453c0",
 			"name": "Goddess of Victory: Nikke",
 			"slug": "nikke",
-			"image": "https://nikke-en.com/pc/ossweb-img/swiper3_img1.png"
+			"image": "https://i0.wp.com/news.qoo-app.com/en/wp-content/uploads/sites/3/2022/03/NIKKE-Goddess-of-Victory-Coming-to-Japan-in-2022.jpeg"
 		},
 		{
 			"id": "86de2f00-6912-4320-9fbe-687db24a999a",
@@ -25,6 +25,7 @@
 			"gameId": "arknights",
 			"name": "Windflit",
 			"slug": "windflit",
+			"href": "https://gamepress.gg/arknights/operator/windflit",
 			"images": {
 				"sm": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_433_windft.png",
 				"lg": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_433_windft_1.png"
@@ -35,6 +36,7 @@
 			"gameId": "arknights",
 			"name": "Lumen",
 			"slug": "lumen",
+			"href": "https://gamepress.gg/arknights/operator/lumen",
 			"images": {
 				"sm": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_4042_lumen.png",
 				"lg": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_4042_lumen_1.png"
@@ -45,6 +47,7 @@
 			"gameId": "arknights",
 			"name": "Irene",
 			"slug": "irene",
+			"href": "https://gamepress.gg/arknights/operator/irene",
 			"images": {
 				"sm": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_4009_irene.png",
 				"lg": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_4009_irene_1.png"
@@ -55,6 +58,7 @@
 			"gameId": "arknights",
 			"name": "Specter the Unchained",
 			"slug": "specter-the-unchained",
+			"href": "https://gamepress.gg/arknights/operator/specter-unchained",
 			"images": {
 				"sm": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_1023_ghost2.png",
 				"lg": "https://gamepress.gg/arknights/sites/arknights/files/2022-05/char_1023_ghost2_1.png"
@@ -65,6 +69,7 @@
 			"gameId": "arknights",
 			"name": "Horn",
 			"slug": "horn",
+			"href": "https://gamepress.gg/arknights/operator/horn",
 			"images": {
 				"sm": "https://gamepress.gg/arknights/sites/arknights/files/2022-04/char_4039_horn.png",
 				"lg": "https://gamepress.gg/arknights/sites/arknights/files/2022-04/char_4039_horn_1.png"

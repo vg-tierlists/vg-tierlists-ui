@@ -15,4 +15,5 @@ type Images = {
 
 export type Character = ApiResource & {
 	images: Images;
+	href: string;
 };

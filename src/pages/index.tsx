@@ -1,21 +1,21 @@
-import {Container, Flex, Space, Text, Title} from '@mantine/core';
+import {Flex, Space, Title} from '@mantine/core';
+import type {GetStaticProps} from 'next';
 
+import {getGames, queryKeys} from 'api';
 import {GameCard} from 'components';
 import {useGames} from 'hooks';
+import {queryStaticProps} from 'utils';
+
+export const getStaticProps: GetStaticProps = () =>
+	queryStaticProps({
+		queryKey: queryKeys.games(),
+		queryFn: getGames,
+	});
 
 const Home = () => {
-	const {isLoading, isError, data: games} = useGames();
-
-	if (isLoading) {
-		return <Text>Loading...</Text>;
-	}
-
-	if (isError) {
-		return <Text>Error...</Text>;
-	}
-
+	const {games} = useGames();
 	return (
-		<Container>
+		<>
 			<Title>Games</Title>
 			<Space h="lg" />
 			<Flex gap="md" wrap="wrap">
@@ -23,7 +23,7 @@ const Home = () => {
 					<GameCard key={game.id} game={game} />
 				))}
 			</Flex>
-		</Container>
+		</>
 	);
 };
 

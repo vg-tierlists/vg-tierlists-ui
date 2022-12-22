@@ -4,7 +4,7 @@ import {NavButton} from 'components';
 import {useGame, useGameNav} from 'hooks';
 
 const GameNavbar = () => {
-	const {data: game} = useGame();
+	const {game} = useGame();
 	const {links} = useGameNav();
 	return (
 		<Navbar width={{base: 300}}>
