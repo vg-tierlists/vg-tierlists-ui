@@ -1,7 +1,13 @@
-api/live.json
+/api/live.json
 
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# IDEs
+.idea/
+.vscode/
 
+# Created by https://www.toptal.com/developers/gitignore/api/yarn,nextjs
+# Edit at https://www.toptal.com/developers/gitignore?templates=yarn,nextjs
+
+### NextJS ###
 # dependencies
 /node_modules
 /.pnp
@@ -16,6 +22,10 @@ api/live.json
 
 # production
 /build
+
+# misc
+.DS_Store
+*.pem
 
 # debug
 npm-debug.log*
@@ -33,5 +43,21 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# vscode
-.vscode/
+### yarn ###
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# if you are NOT using Zero-installs, then:
+# comment the following lines
+#!.yarn/cache
+
+# and uncomment the following lines
+.pnp.*
+
+# End of https://www.toptal.com/developers/gitignore/api/yarn,nextjs

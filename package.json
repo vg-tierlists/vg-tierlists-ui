@@ -73,5 +73,6 @@
 		"transformIgnorePatterns": [
 			"node_modules/(?!axios)/"
 		]
-	}
+	},
+	"packageManager": "yarn@3.3.1"
 }
